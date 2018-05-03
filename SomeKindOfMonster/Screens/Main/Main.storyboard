@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ix9-ch-oiq">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Collection View Controller-->
+        <scene sceneID="CdD-MK-oo4">
+            <objects>
+                <collectionViewController id="Ix9-ch-oiq" customClass="MainCollectionViewController" customModule="SomeKindOfMonster" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="573-1z-85A">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="80" minimumInteritemSpacing="10" id="iLO-7C-AGh">
+                            <size key="itemSize" width="1732" height="999"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="70" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CollectionCell" id="nxQ-f9-Kny" customClass="CollectionCell" customModule="SomeKindOfMonster" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="85" width="1732" height="980"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="1732" height="980"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tumbler" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQc-SP-A0b">
+                                            <rect key="frame" x="0.0" y="0.0" width="1732" height="886"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0X-KI-RVe">
+                                            <rect key="frame" x="20" y="926" width="1692" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="46" id="jW9-fT-6yJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="m0X-KI-RVe" secondAttribute="bottom" id="9oS-ax-iJu"/>
+                                    <constraint firstItem="m0X-KI-RVe" firstAttribute="leading" secondItem="nxQ-f9-Kny" secondAttribute="leadingMargin" constant="12" id="EBI-G3-WUI"/>
+                                    <constraint firstItem="m0X-KI-RVe" firstAttribute="top" secondItem="VQc-SP-A0b" secondAttribute="bottom" constant="40" id="F2f-d2-VEx"/>
+                                    <constraint firstItem="VQc-SP-A0b" firstAttribute="leading" secondItem="nxQ-f9-Kny" secondAttribute="leading" id="Hd0-q2-zKB"/>
+                                    <constraint firstAttribute="trailing" secondItem="VQc-SP-A0b" secondAttribute="trailing" id="IN6-jL-Osb"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="m0X-KI-RVe" secondAttribute="trailing" constant="12" id="Ofn-ee-Xip"/>
+                                    <constraint firstItem="VQc-SP-A0b" firstAttribute="top" secondItem="nxQ-f9-Kny" secondAttribute="top" id="eEK-xp-b9q"/>
+                                </constraints>
+                                <size key="customSize" width="1732" height="980"/>
+                                <connections>
+                                    <outlet property="imageView" destination="VQc-SP-A0b" id="440-Wl-abv"/>
+                                    <outlet property="textLabel" destination="m0X-KI-RVe" id="Rwu-aZ-Ioq"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Ix9-ch-oiq" id="4Vb-ly-nAF"/>
+                            <outlet property="delegate" destination="Ix9-ch-oiq" id="k3F-EP-zIT"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <segue destination="2MI-kv-AJx" kind="show" identifier="ShowDetails" id="tc7-Cm-mjN"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kc4-50-PWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-435" y="165"/>
+        </scene>
+        <!--Name View Controller-->
+        <scene sceneID="vNW-db-szy">
+            <objects>
+                <viewController id="2MI-kv-AJx" customClass="HZNameViewController" customModule="SomeKindOfMonster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6kv-zL-ITP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nsz-zW-yIe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ipm-nU-K7u">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2xk-Mn-nG3">
+                                <rect key="frame" x="704" y="442" width="513" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wMO-4F-01M">
+                                <rect key="frame" x="783" y="305" width="354" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFd-sR-K5q">
+                                <rect key="frame" x="704" y="596" width="513" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Press mi fasta"/>
+                                <connections>
+                                    <action selector="buttonActio:" destination="2MI-kv-AJx" eventType="primaryActionTriggered" id="5EF-rd-ZJe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default selectable components" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75B-gg-GD3">
+                                <rect key="frame" x="503" y="60" width="937" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5SZ-Wg-qFL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIq-vG-Ows" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="165"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Tumbler" width="2560" height="1440"/>
+    </resources>
+</document>

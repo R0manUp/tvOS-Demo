@@ -2,7 +2,13 @@
   "images" : [
     {
       "idiom" : "tv",
+      "filename" : "77a55a71f455f9faaaba8d389867ca3d copy.png",
       "scale" : "1x"
+    },
+    {
+      "idiom" : "tv",
+      "filename" : "77a55a71f455f9faaaba8d389867ca3d.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
